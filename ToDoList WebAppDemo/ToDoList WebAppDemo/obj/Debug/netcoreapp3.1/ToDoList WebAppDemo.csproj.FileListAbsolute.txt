@@ -76,3 +76,5 @@ C:\Users\mgeor\source\ToDoList_Glupost\ToDoList WebAppDemo\ToDoList WebAppDemo\o
 C:\Users\mgeor\source\ToDoList_Glupost\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\ToDoList WebAppDemo.dll
 C:\Users\mgeor\source\ToDoList_Glupost\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\ToDoList WebAppDemo.pdb
 C:\Users\mgeor\source\ToDoList_Glupost\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\ToDoList WebAppDemo.genruntimeconfig.cache
+C:\Users\mgeor\source\ToDoList_Glupost\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\Admins\AdminView.cshtml.g.cs
+C:\Users\mgeor\source\ToDoList_Glupost\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\Admins\NoAdmin.cshtml.g.cs

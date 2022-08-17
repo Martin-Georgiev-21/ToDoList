@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using ToDoList_WebAppDemo.Data;
 using ToDoList_WebAppDemo.Models;
 
 namespace ToDoList_WebAppDemo.Controllers
@@ -12,20 +13,34 @@ namespace ToDoList_WebAppDemo.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDbContext _db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext db)
         {
             _logger = logger;
+            _db = db;
         }
-
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult LogIn(User obj)
         {
-            return View();
+            foreach(var item in _db.Users)
+            {
+                if(item.Username == obj.Username && item.Password == obj.Password)
+                {
+                    if (item.IsAdmin == true)
+                    {
+                        return View("../Admins/AdminView");
+                    }
+                    else return View("../Admins/NoAdmin");
+                }
+            }
+            return RedirectToAction("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -1,8 +1,25 @@
-﻿@{
+﻿@model ToDoList_WebAppDemo.Models.User
+
+@{ 
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="~/css/LogInDesign.css" rel="stylesheet" />
+    </head>
+    <body>
+        <form method = "post" asp-action="LogIn">
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input asp-for="Username" class="form-control" placeholder="Username" required />
+
+                <label for="psw"><b>Password</b></label>
+                <input asp-for="Password" class="form-control" placeholder="Enter Password" required />
+
+                <button type="submit" asp-controller="Home" asp-action="LogIn"> LogIn</button>
+            </div>
+        </form>
+    </body>
+</html>
