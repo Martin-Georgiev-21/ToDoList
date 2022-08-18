@@ -9,8 +9,8 @@ using ToDoList_WebAppDemo.Data;
 namespace ToDoList_WebAppDemo.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220816170150_addUsersToDatabase")]
-    partial class addUsersToDatabase
+    [Migration("20220818161513_addUserToDatabase")]
+    partial class addUserToDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,13 +27,35 @@ namespace ToDoList_WebAppDemo.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("CreatorId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("DateOfCreation")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DateOfLastChange")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("IdOfTheEditor")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsAdmin")
                         .HasColumnType("bit");
 
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Password")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

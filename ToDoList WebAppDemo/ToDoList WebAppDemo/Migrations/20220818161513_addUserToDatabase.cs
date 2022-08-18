@@ -2,7 +2,7 @@
 
 namespace ToDoList_WebAppDemo.Migrations
 {
-    public partial class addUsersToDatabase : Migration
+    public partial class addUserToDatabase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,8 +12,14 @@ namespace ToDoList_WebAppDemo.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Username = table.Column<string>(nullable: true),
-                    Password = table.Column<string>(nullable: true),
+                    Username = table.Column<string>(nullable: false),
+                    Password = table.Column<string>(nullable: false),
+                    FirstName = table.Column<string>(nullable: false),
+                    LastName = table.Column<string>(nullable: false),
+                    DateOfCreation = table.Column<string>(nullable: true),
+                    CreatorId = table.Column<int>(nullable: false),
+                    DateOfLastChange = table.Column<string>(nullable: true),
+                    IdOfTheEditor = table.Column<int>(nullable: false),
                     IsAdmin = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
