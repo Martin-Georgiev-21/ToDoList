@@ -5728,11 +5728,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mgeor\\source\\ToDoList_Glupost\\ToDoList WebAppDemo\\ToDoList WebAppDemo\\ToDoList WebAppDemo.csproj",
+      "projectUniqueName": "C:\\Users\\mgeor\\Documents\\GitHub\\ToDoList\\ToDoList WebAppDemo\\ToDoList WebAppDemo\\ToDoList WebAppDemo.csproj",
       "projectName": "ToDoList WebAppDemo",
-      "projectPath": "C:\\Users\\mgeor\\source\\ToDoList_Glupost\\ToDoList WebAppDemo\\ToDoList WebAppDemo\\ToDoList WebAppDemo.csproj",
+      "projectPath": "C:\\Users\\mgeor\\Documents\\GitHub\\ToDoList\\ToDoList WebAppDemo\\ToDoList WebAppDemo\\ToDoList WebAppDemo.csproj",
       "packagesPath": "C:\\Users\\mgeor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mgeor\\source\\ToDoList_Glupost\\ToDoList WebAppDemo\\ToDoList WebAppDemo\\obj\\",
+      "outputPath": "C:\\Users\\mgeor\\Documents\\GitHub\\ToDoList\\ToDoList WebAppDemo\\ToDoList WebAppDemo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mgeor\\AppData\\Roaming\\NuGet\\NuGet.Config",

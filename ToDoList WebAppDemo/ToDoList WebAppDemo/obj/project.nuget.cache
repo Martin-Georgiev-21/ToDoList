@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bqFBhtZT8yNu8RM2pQFtT+v2QTl88TTo3DcR1fceq9nDcQNIQI/mMfgFW4BJHqYNMErJ6TyNEckolRFLbLtexw==",
+  "dgSpecHash": "ewP6M7fD1oFmCOrnMcwdh8mv4HhR4zCCFMnk/sU2dRd5wVshrbM6uxdOC0lAd36JSU2QutSH0rPk8vOesy4msA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mgeor\\source\\ToDoList_Glupost\\ToDoList WebAppDemo\\ToDoList WebAppDemo\\ToDoList WebAppDemo.csproj",
+  "projectFilePath": "C:\\Users\\mgeor\\Documents\\GitHub\\ToDoList\\ToDoList WebAppDemo\\ToDoList WebAppDemo\\ToDoList WebAppDemo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mgeor\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\mgeor\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
