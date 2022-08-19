@@ -35,9 +35,9 @@ namespace ToDoList_WebAppDemo.Controllers
                 {
                     if (item.IsAdmin == true)
                     {
-                        return View("../AfterLogIn/UsersManagementView");
+                        return View("../UsersManagement/UsersManagementView");
                     }
-                    else return View("../AfterLogIn/AdminView");
+                    else return View("../UsersManagement/AdminView");
                 }
             }
             return RedirectToAction("Index");
