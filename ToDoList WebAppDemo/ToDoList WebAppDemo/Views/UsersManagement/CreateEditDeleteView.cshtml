@@ -19,10 +19,28 @@
                                 ID
                             </th>
                             <th>
+                                First Name
+                            </th>
+                            <th>
+                                Last Name
+                            </th>
+                            <th>
                                 Username
                             </th>
                             <th>
                                 Password
+                            </th>
+                            <th>
+                                Creator ID
+                            </th>
+                            <th>
+                                Date of Creation
+                            </th>
+                            <th>
+                                Editor ID
+                            </th>
+                            <th>
+                                Date of Last Change
                             </th>
                             <th>
                                 Admin
@@ -34,8 +52,14 @@
                         {
                         <tr>
                             <td width="50%">@obj.Id</td>
+                            <td width="50%">@obj.FirstName</td>
+                            <td width="50%">@obj.LastName</td>
                             <td width="50%">@obj.Username</td>
                             <td width="50%">@obj.Password</td>
+                            <td width="50%">@obj.CreatorId</td>
+                            <td width="50%">@obj.DateOfCreation</td>
+                            <td width="50%">@obj.IdOfTheEditor</td>
+                            <td width="50%">@obj.DateOfLastChange</td>
                             <td width="50%">@obj.IsAdmin</td>
                         </tr>
                         }

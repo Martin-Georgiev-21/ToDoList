@@ -26,7 +26,6 @@ namespace ToDoList_WebAppDemo.Controllers
         {
             IEnumerable<User> objList = _db.Users;
             return View(objList);
-           // return View("../AfterLogIn/Actions/CreateEditDeleteUserView");
         }
     }
 }

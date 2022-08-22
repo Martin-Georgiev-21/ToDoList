@@ -33,6 +33,8 @@ namespace ToDoList_WebAppDemo.Controllers
             {
                 if(item.Username == obj.Username && item.Password == obj.Password)
                 {
+                    Logged.LoggedIn = true;
+                    Logged.LoggedId = item.Id;
                     if (item.IsAdmin == true)
                     {
                         return View("../UsersManagement/UsersManagementView");
