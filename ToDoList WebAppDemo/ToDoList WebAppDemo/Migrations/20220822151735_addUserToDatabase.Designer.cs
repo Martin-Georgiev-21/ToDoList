@@ -9,7 +9,7 @@ using ToDoList_WebAppDemo.Data;
 namespace ToDoList_WebAppDemo.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220818161513_addUserToDatabase")]
+    [Migration("20220822151735_addUserToDatabase")]
     partial class addUserToDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

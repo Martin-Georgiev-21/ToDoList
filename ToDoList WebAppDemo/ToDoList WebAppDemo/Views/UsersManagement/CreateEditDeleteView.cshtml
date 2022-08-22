@@ -6,6 +6,11 @@
         <div class ="col-6">
             <h2 class="text-primary">Users List</h2>
         </div>
+        <div class="col-6 text-right">
+            <a  asp-controller="UsersManagement" asp-action="CreateUser" class="btn btn-primary">
+                Create New User
+            </a>
+        </div>
     </div>
 
     <br /><br />
@@ -61,6 +66,19 @@
                             <td width="50%">@obj.IdOfTheEditor</td>
                             <td width="50%">@obj.DateOfLastChange</td>
                             <td width="50%">@obj.IsAdmin</td>
+                            <td class="text-center">
+                                <div class="w-75 btn-group" role="group">
+                                    <a asp-controller="UsersManagement" asp-route-Id ="@obj.Id" asp-action="EditUser" class="btn btn-primary mx-2">
+                                        Edit
+                                    </a>
+                                    @if (obj.IsAdmin == false || obj.Id != Logged.LoggedId)
+                                    {
+                                    <a asp-controller="UsersManagement" asp-route-Id ="@obj.Id" asp-action="DeleteUser" class="btn btn-danger mx-2">
+                                        Delete
+                                    </a>
+                                    }
+                                </div>
+                            </td>
                         </tr>
                         }
                     </tbody>
