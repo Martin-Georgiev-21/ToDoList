@@ -35,9 +35,11 @@ namespace ToDoList_WebAppDemo.Models
         [DataType(DataType.Text)]
         public string DateOfCreation { get; set; }
 
+        [DisplayName("Creater ID")]
         public int CreatorId { get; set; }
 
         [DataType(DataType.Date)]
+        [DisplayName("Date of Creation")]
         public string DateOfLastChange { get; set; }
 
         public int IdOfTheEditor { get; set; }
