@@ -12,12 +12,19 @@ namespace ToDoList_WebAppDemo.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity), Key()]
         public int Id { get; set; }
 
-        public bool IsDone { get; set; }
+        [Required]
+        [DataType(DataType.Text)]
+        public string Title { get; set; }
 
         [DataType(DataType.Text)]
-        public string Discription { get; set; }
+        public string DateOfCreation { get; set; }
 
-        public int UserId { get; set; }
+        public int CreatorId { get; set; }
+
+        [DataType(DataType.Date)]
+        public string DateOfLastChange { get; set; }
+
+        public int IdOfTheEditor { get; set; }
 
     }
 }

@@ -37,9 +37,9 @@ namespace ToDoList_WebAppDemo.Controllers
                     Logged.LoggedId = item.Id;
                     if (item.IsAdmin == true)
                     {
-                        return View("../UsersManagement/UsersManagementView");
+                        return View("../AfterLogInAdmin");
                     }
-                    else return View("../UsersManagement/AdminView");
+                    else return View("../AfterLogInNoAdmin");
                 }
             }
             return RedirectToAction("Index");

@@ -1,0 +1,76 @@
+﻿@model IEnumerable<ToDoList_WebAppDemo.Models.ToDoList>
+
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">ToDo List</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-controller="ToDoListManagement" asp-action="CreateToDoList" class="btn btn-primary">
+                Create New User
+            </a>
+        </div>
+    </div>
+
+    <br /><br />
+
+    @if (Model.Count() > 0)
+    {
+        <table class="table table-bordered table-striped" style="width: 100%">
+            <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Creator ID
+                    </th>
+                    <th>
+                        Date of Creation
+                    </th>
+                    <th>
+                        Editor ID
+                    </th>
+                    <th>
+                        Date of Last Change
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var obj in Model)
+                {
+                    if (obj.CreatorId == Logged.LoggedId)
+                    {
+                    <tr>
+                        <td width="50%">@obj.Id</td>
+                        <td width="50%">@obj.Title</td>
+                        <td width="50%">@obj.CreatorId</td>
+                        <td width="50%">@obj.DateOfCreation</td>
+                        <td width="50%">@obj.IdOfTheEditor</td>
+                        <td width="50%">@obj.DateOfLastChange</td>
+                        <td class="text-center">
+                            <div class="w-75 btn-group" role="group">
+                                <a asp-controller="ToDoListManagement" asp-route-Id="@obj.Id" asp-action="EditList" class="btn btn-primary mx-2">
+                                    Edit
+                                </a>
+                                <a asp-controller="ToDoListManagement" asp-route-Id="@obj.Id" asp-action="DeleteList" class="btn btn-danger mx-2">
+                                    Delete
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p> No ToDoLists exists.</p>
+    }
+</div>
+

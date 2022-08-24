@@ -156,9 +156,7 @@ C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo
 C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\ToDoList WebAppDemo.dll
 C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\ToDoList WebAppDemo.pdb
 C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\ToDoList WebAppDemo.genruntimeconfig.cache
-C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\UsersManagement\AdminView.cshtml.g.cs
 C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\UsersManagement\CreateEditDeleteView.cshtml.g.cs
-C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\UsersManagement\UsersManagementView.cshtml.g.cs
 C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
 C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
@@ -234,3 +232,9 @@ C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo
 C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\UsersManagement\CreateUser.cshtml.g.cs
 C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\UsersManagement\EditUser.cshtml.g.cs
 C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\UsersManagement\DeleteUser.cshtml.g.cs
+C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\ToDoListManagement\CreateEditDeleteListView.cshtml.g.cs
+C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\ToDoListManagement\CreateToDoList.cshtml.g.cs
+C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\ToDoListManagement\EditList.cshtml.g.cs
+C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\AfterLogInAdmin.cshtml.g.cs
+C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\AfterLogInNoAdmin.cshtml.g.cs
+C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\ToDoListManagement\DeleteList.cshtml.g.cs
