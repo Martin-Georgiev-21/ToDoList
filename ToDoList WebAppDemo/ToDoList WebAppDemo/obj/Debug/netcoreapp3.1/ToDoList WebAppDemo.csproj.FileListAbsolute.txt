@@ -235,6 +235,8 @@ C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo
 C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\ToDoListManagement\CreateEditDeleteListView.cshtml.g.cs
 C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\ToDoListManagement\CreateToDoList.cshtml.g.cs
 C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\ToDoListManagement\EditList.cshtml.g.cs
+C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\ToDoListManagement\DeleteList.cshtml.g.cs
 C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\AfterLogInAdmin.cshtml.g.cs
 C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\AfterLogInNoAdmin.cshtml.g.cs
-C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\ToDoListManagement\DeleteList.cshtml.g.cs
+C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\ToDoListManagement\ShareUserId.cshtml.g.cs
+C:\Users\mgeor\Documents\GitHub\ToDoList\ToDoList WebAppDemo\ToDoList WebAppDemo\obj\Debug\netcoreapp3.1\Razor\Views\ToDoListManagement\ShareToDoListId.cshtml.g.cs

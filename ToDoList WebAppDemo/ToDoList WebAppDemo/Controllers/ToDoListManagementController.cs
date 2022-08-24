@@ -20,7 +20,9 @@ namespace ToDoList_WebAppDemo.Controllers
         public IActionResult CreateEditDeleteListView()
         {
             IEnumerable<ToDoList> objList = _db.ToDoLists;
-            return View(objList);
+            IEnumerable<SharedToDoListWithUser> shareList = _db.SharedToDoListsWithUsers;
+            BigViewModel bigviewmodel = new BigViewModel(objList, shareList);
+            return View(bigviewmodel);
         }
         public IActionResult CreateToDoList()
         {
@@ -89,18 +91,26 @@ namespace ToDoList_WebAppDemo.Controllers
             _db.SaveChanges();
             return RedirectToAction("CreateEditDeleteListView");
         }
-        public IActionResult ShareList(int? id)
+        public IActionResult ShareToDoListId(int id)
         {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-            var obj = _db.ToDoLists.Find(id);
-            if (obj == null)
-            {
-                return NotFound();
-            }
-            return View(obj);
+            SharingToDoListWithUser.ToDoListId = id;
+            IEnumerable<User> objList = _db.Users;
+            return View(objList);
+        }
+        public IActionResult ShareUserId(int id)
+        {
+            SharingToDoListWithUser.UserIdForShare = id;
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreateShareList(SharedToDoListWithUser obj)
+        {
+            obj.ToDoListId = SharingToDoListWithUser.ToDoListId;
+            obj.UserId = SharingToDoListWithUser.UserIdForShare;
+            _db.SharedToDoListsWithUsers.Add(obj);
+            _db.SaveChanges();
+            return RedirectToAction("CreateEditDeleteListView");
         }
     }
 }

@@ -1,0 +1,30 @@
+﻿@model ToDoList_WebAppDemo.Models.SharedToDoListWithUser
+
+<form method="post" asp-action="CreateShareList">
+    <div class="border p-3">
+
+        <div class="form-group row">
+            <h2 class="text-info pl-3">Approve Share</h2>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group row">
+                    <div class="col-8 offset-4 row">
+
+                        <div class="col">
+                            <input type="submit" class="btn btn-info w-100" value="Approve" />
+                        </div>
+                        <div class="col">
+                            <a asp-action="CreateEditDeleteListView" class="btn btn-success w-100">Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                @* Keep this empty *@
+            </div>
+        </div>
+    </div>
+
+</form>
+

@@ -1,2 +1,15 @@
-﻿<h1>Succesful Not an Admin authentication</h1>
-<h2><label>Id is @Logged.LoggedId</label></h2>
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/css/LogInDesign.css" rel="stylesheet" />
+</head>
+<body>
+    <form>
+        <div class="container">
+            <button type="submit" asp-controller="ToDoListManagement" asp-action="CreateEditDeleteListView">ToDo Lists Management</button>
+            <button type="submit" asp-controller="Home" asp-action="LogIn">Task Management</button>
+        </div>
+    </form>
+</body>
+</html>
