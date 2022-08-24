@@ -80,16 +80,32 @@ namespace ToDoList_WebAppDemo.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult DeletePostList(int? id)
+        public IActionResult DeletePostList(int id)
         {
+            IEnumerable<SharedToDoListWithUser> objList = _db.SharedToDoListsWithUsers;
             var obj = _db.ToDoLists.Find(id);
             if (obj == null)
             {
                 return NotFound();
             }
-            _db.ToDoLists.Remove(obj);
-            _db.SaveChanges();
-            return RedirectToAction("CreateEditDeleteListView");
+            else if (Logged.LoggedId == obj.CreatorId)
+            {
+                _db.ToDoLists.Remove(obj);
+                _db.SaveChanges();
+                return RedirectToAction("CreateEditDeleteListView");
+            }
+            else
+            {
+                foreach (var share in objList)
+                {
+                    if (share.UserId == Logged.LoggedId && share.ToDoListId == id)
+                    {
+                        _db.SharedToDoListsWithUsers.Remove(share);
+                    }
+                }
+                _db.SaveChanges();
+                return RedirectToAction("CreateEditDeleteListView");
+            }
         }
         public IActionResult ShareToDoListId(int id)
         {
