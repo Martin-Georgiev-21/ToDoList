@@ -15,5 +15,6 @@ namespace ToDoList_WebAppDemo.Data
         }
 
         public DbSet<User> Users{ get; set; }
+        public DbSet<ToDoList> ToDoLists { get; set; }
     }
 }
