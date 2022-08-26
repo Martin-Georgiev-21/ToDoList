@@ -9,7 +9,9 @@ namespace ToDoList_WebAppDemo
     {
         private static bool loggedIn = false;
         private static int loggedId;
+        private static bool isAdmin;
         public static bool LoggedIn { get => loggedIn; set => loggedIn = value; }
         public static int LoggedId { get => loggedId; set => loggedId = value; }
+        public static bool IsAdmin { get => isAdmin; set => isAdmin = value; }
     }
 }

@@ -70,8 +70,8 @@
                                 <td class="text-center">
                                     <div class="w-75 btn-group" role="group">
                                         <a asp-controller="TaskManagement" asp-route-Id="@obj.Id" asp-action="TaskView" class="btn btn-success mx-2">
-                                        Tasks
-                                    </a>
+                                            Tasks
+                                        </a>
                                     </div>
                                 </td>
                             </tr>
@@ -84,6 +84,22 @@
     else
     {
         <p> No ToDoLists exists.</p>
+    }
+    @if (Logged.IsAdmin)
+    {
+        <div class="col-6 text-right">
+            <a asp-controller="Home" asp-action="Admin" class="btn btn-danger">
+                Back
+            </a>
+        </div>
+    }
+    else
+    {
+        <div class="col-6 text-right">
+            <a asp-controller="Home" asp-action="NoAdmin" class="btn btn-danger">
+                Back
+            </a>
+        </div>
     }
 </div>
 

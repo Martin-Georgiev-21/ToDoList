@@ -3,11 +3,11 @@
 
 <div class="container p-3">
     <div class="row pt-4">
-        <div class ="col-6">
+        <div class="col-6">
             <h2 class="text-primary">Users List</h2>
         </div>
         <div class="col-6 text-right">
-            <a  asp-controller="UsersManagement" asp-action="CreateUser" class="btn btn-primary">
+            <a asp-controller="UsersManagement" asp-action="CreateUser" class="btn btn-primary">
                 Create New User
             </a>
         </div>
@@ -16,72 +16,77 @@
     <br /><br />
 
     @if (Model.Count() > 0)
-            {
-                <table class="table table-bordered table-striped" style="width: 100%">
-                    <thead>
-                        <tr>
-                            <th>
-                                ID
-                            </th>
-                            <th>
-                                First Name
-                            </th>
-                            <th>
-                                Last Name
-                            </th>
-                            <th>
-                                Username
-                            </th>
-                            <th>
-                                Password
-                            </th>
-                            <th>
-                                Creator ID
-                            </th>
-                            <th>
-                                Date of Creation
-                            </th>
-                            <th>
-                                Editor ID
-                            </th>
-                            <th>
-                                Date of Last Change
-                            </th>
-                            <th>
-                                Admin
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach(var obj in Model)
-                        {
-                        <tr>
-                            <td width="50%">@obj.Id</td>
-                            <td width="50%">@obj.FirstName</td>
-                            <td width="50%">@obj.LastName</td>
-                            <td width="50%">@obj.Username</td>
-                            <td width="50%">@obj.Password</td>
-                            <td width="50%">@obj.CreatorId</td>
-                            <td width="50%">@obj.DateOfCreation</td>
-                            <td width="50%">@obj.IdOfTheEditor</td>
-                            <td width="50%">@obj.DateOfLastChange</td>
-                            <td width="50%">@obj.IsAdmin</td>
-                            <td class="text-center">
-                                <div class="w-75 btn-group" role="group">
-                                    <a asp-controller="UsersManagement" asp-route-Id ="@obj.Id" asp-action="EditUser" class="btn btn-primary mx-2">
-                                        Edit
-                                    </a>
-                                    @if (obj.IsAdmin == false || obj.Id != Logged.LoggedId)
-                                    {
-                                    <a asp-controller="UsersManagement" asp-route-Id ="@obj.Id" asp-action="DeleteUser" class="btn btn-danger mx-2">
+    {
+        <table class="table table-bordered table-striped" style="width: 100%">
+            <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        First Name
+                    </th>
+                    <th>
+                        Last Name
+                    </th>
+                    <th>
+                        Username
+                    </th>
+                    <th>
+                        Password
+                    </th>
+                    <th>
+                        Creator ID
+                    </th>
+                    <th>
+                        Date of Creation
+                    </th>
+                    <th>
+                        Editor ID
+                    </th>
+                    <th>
+                        Date of Last Change
+                    </th>
+                    <th>
+                        Admin
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var obj in Model)
+                {
+                    <tr>
+                        <td width="50%">@obj.Id</td>
+                        <td width="50%">@obj.FirstName</td>
+                        <td width="50%">@obj.LastName</td>
+                        <td width="50%">@obj.Username</td>
+                        <td width="50%">@obj.Password</td>
+                        <td width="50%">@obj.CreatorId</td>
+                        <td width="50%">@obj.DateOfCreation</td>
+                        <td width="50%">@obj.IdOfTheEditor</td>
+                        <td width="50%">@obj.DateOfLastChange</td>
+                        <td width="50%">@obj.IsAdmin</td>
+                        <td class="text-center">
+                            <div class="w-75 btn-group" role="group">
+                                <a asp-controller="UsersManagement" asp-route-Id="@obj.Id" asp-action="EditUser" class="btn btn-primary mx-2">
+                                    Edit
+                                </a>
+                                @if (obj.IsAdmin == false || obj.Id != Logged.LoggedId)
+                                {
+                                    <a asp-controller="UsersManagement" asp-route-Id="@obj.Id" asp-action="DeleteUser" class="btn btn-danger mx-2">
                                         Delete
                                     </a>
-                                    }
-                                </div>
-                            </td>
-                        </tr>
-                        }
-                    </tbody>
-                </table>
-            }
+                                }
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+<div class="col-6 text-right">
+        <a asp-controller="Home" asp-action="Admin" class="btn btn-danger">
+            Back
+        </a>
+</div>
 </div>

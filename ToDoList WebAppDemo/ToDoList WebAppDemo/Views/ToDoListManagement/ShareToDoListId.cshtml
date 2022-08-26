@@ -20,31 +20,33 @@
                     <th>
                         Last Name
                     </th>
-                    <th>
-                        Username
-                    </th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var obj in Model)
                 {
                     if (obj.Id != Logged.LoggedId)
-                    { 
-                <tr>
-                    <td width="50%">@obj.FirstName</td>
-                    <td width="50%">@obj.LastName</td>
-                    <td class="text-center">
-                        <div class="w-75 btn-group" role="group">
-                            <a asp-controller="ToDoListManagement" asp-route-Id="@obj.Id" asp-action="ShareUserId" class="btn btn-success mx-2">
-                                Share
-                            </a>
-                        </div>
-                    </td>
-                </tr>
+                    {
+                        <tr>
+                            <td width="50%">@obj.FirstName</td>
+                            <td width="50%">@obj.LastName</td>
+                            <td class="text-center">
+                                <div class="w-75 btn-group" role="group">
+                                    <a asp-controller="ToDoListManagement" asp-route-Id="@obj.Id" asp-action="ShareUserId" class="btn btn-success mx-2">
+                                        Share
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
                     }
                 }
             </tbody>
         </table>
     }
+        <div class="col-6 text-right">
+            <a asp-action="CreateEditDeleteListView" class="btn btn-danger">
+                Back
+            </a>
+        </div>
 </div>
 

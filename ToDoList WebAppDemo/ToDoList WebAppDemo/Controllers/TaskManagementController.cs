@@ -80,5 +80,41 @@ namespace ToDoList_WebAppDemo.Controllers
             _db.SaveChanges();
             return RedirectToAction("TaskView");
         }
+        public IActionResult EditTask(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var obj = _db.Tasks.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            return View(obj);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult EditTask(Task obj)
+        {
+            DateTime now = DateTime.Now;
+            obj.IdOfTheEditor = Logged.LoggedId;
+            obj.DateOfLastChange = now.ToString();
+            _db.Tasks.Update(obj);
+            _db.SaveChanges();
+            return RedirectToAction("TaskView");
+        }
+        public IActionResult IsCompleteTask(int id)
+        {
+            var obj = _db.Tasks.Find(id);
+            DateTime now = DateTime.Now;
+            obj.IdOfTheEditor = Logged.LoggedId;
+            obj.DateOfLastChange = now.ToString();
+            if (obj.IsComplete == false) obj.IsComplete = true;
+            else obj.IsComplete = false;
+            _db.Tasks.Update(obj);
+            _db.SaveChanges();
+            return RedirectToAction("TaskView");
+        }
     }
 }

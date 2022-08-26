@@ -43,52 +43,52 @@
             <tbody>
                 @foreach (var obj in Model.ToDoList)
                 {
-                    if(obj.CreatorId == Logged.LoggedId)
-                    { 
-                <tr>
-                    <td width="50%">@obj.Id</td>
-                    <td width="50%">@obj.Title</td>
-                    <td width="50%">@obj.CreatorId</td>
-                    <td width="50%">@obj.DateOfCreation</td>
-                    <td width="50%">@obj.IdOfTheEditor</td>
-                    <td width="50%">@obj.DateOfLastChange</td>
-                    <td class="text-center">
-                        <div class="w-75 btn-group" role="group">
-                            <a asp-controller="ToDoListManagement" asp-route-Id="@obj.Id" asp-action="EditList" class="btn btn-primary mx-2">
-                                Edit
-                            </a>
-                            <a asp-controller="ToDoListManagement" asp-route-Id="@obj.Id" asp-action="ShareToDoListId" class="btn btn-success mx-2">
-                                Share
-                            </a>
-                            <a asp-controller="ToDoListManagement" asp-route-Id="@obj.Id" asp-action="DeleteList" class="btn btn-danger mx-2">
-                                Delete
-                            </a>
-                        </div>
-                    </td>
-                </tr>
+                    if (obj.CreatorId == Logged.LoggedId)
+                    {
+                        <tr>
+                            <td width="50%">@obj.Id</td>
+                            <td width="50%">@obj.Title</td>
+                            <td width="50%">@obj.CreatorId</td>
+                            <td width="50%">@obj.DateOfCreation</td>
+                            <td width="50%">@obj.IdOfTheEditor</td>
+                            <td width="50%">@obj.DateOfLastChange</td>
+                            <td class="text-center">
+                                <div class="w-75 btn-group" role="group">
+                                    <a asp-controller="ToDoListManagement" asp-route-Id="@obj.Id" asp-action="EditList" class="btn btn-primary mx-2">
+                                        Edit
+                                    </a>
+                                    <a asp-controller="ToDoListManagement" asp-route-Id="@obj.Id" asp-action="ShareToDoListId" class="btn btn-success mx-2">
+                                        Share
+                                    </a>
+                                    <a asp-controller="ToDoListManagement" asp-route-Id="@obj.Id" asp-action="DeleteList" class="btn btn-danger mx-2">
+                                        Delete
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
                     }
                     foreach (var item in Model.Shares)
                     {
-                        if (item.UserId==Logged.LoggedId && obj.Id == item.ToDoListId)
+                        if (item.UserId == Logged.LoggedId && obj.Id == item.ToDoListId)
                         {
-                    <tr>
-                        <td width="50%">@obj.Id</td>
-                        <td width="50%">@obj.Title</td>
-                        <td width="50%">@obj.CreatorId</td>
-                        <td width="50%">@obj.DateOfCreation</td>
-                        <td width="50%">@obj.IdOfTheEditor</td>
-                        <td width="50%">@obj.DateOfLastChange</td>
-                        <td class="text-center">
-                            <div class="w-75 btn-group" role="group">
-                                <a asp-controller="ToDoListManagement" asp-route-Id="@obj.Id" asp-action="EditList" class="btn btn-primary mx-2">
-                                    Edit
-                                </a>
-                                <a asp-controller="ToDoListManagement" asp-route-Id="@obj.Id" asp-action="DeleteList" class="btn btn-danger mx-2">
-                                    Delete
-                                </a>
-                            </div>
-                        </td>
-                    </tr>
+                            <tr>
+                                <td width="50%">@obj.Id</td>
+                                <td width="50%">@obj.Title</td>
+                                <td width="50%">@obj.CreatorId</td>
+                                <td width="50%">@obj.DateOfCreation</td>
+                                <td width="50%">@obj.IdOfTheEditor</td>
+                                <td width="50%">@obj.DateOfLastChange</td>
+                                <td class="text-center">
+                                    <div class="w-75 btn-group" role="group">
+                                        <a asp-controller="ToDoListManagement" asp-route-Id="@obj.Id" asp-action="EditList" class="btn btn-primary mx-2">
+                                            Edit
+                                        </a>
+                                        <a asp-controller="ToDoListManagement" asp-route-Id="@obj.Id" asp-action="DeleteList" class="btn btn-danger mx-2">
+                                            Delete
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
                         }
                     }
                 }
@@ -98,6 +98,22 @@
     else
     {
         <p> No ToDoLists exists.</p>
+    }
+    @if (Logged.IsAdmin)
+    {
+        <div class="col-6 text-right">
+            <a asp-controller="Home" asp-action="Admin" class="btn btn-danger">
+                Back
+            </a>
+        </div>
+    }
+    else
+    { 
+        <div class="col-6 text-right">
+            <a asp-controller="Home" asp-action="NoAdmin" class="btn btn-danger">
+                Back
+            </a>
+        </div>
     }
 </div>
 

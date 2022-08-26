@@ -21,9 +21,10 @@ namespace ToDoList_WebAppDemo.Models
         [DataType(DataType.Text)]
         public string Description { get; set; }
 
+        [DisplayName("Is it Completed")]
         public bool IsComplete { get; set; }
 
-        [DataType(DataType.Date)]
+        [DataType(DataType.Text)]
         [DisplayName("Date of Creation")]
         public string DateOfCreation { get; set; }
 

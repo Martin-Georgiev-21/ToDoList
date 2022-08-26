@@ -37,6 +37,11 @@ namespace ToDoList_WebAppDemo.Controllers
                     Logged.LoggedId = item.Id;
                     if (item.IsAdmin == true)
                     {
+                        Logged.IsAdmin = true;
+                    }
+                    else Logged.IsAdmin = false;
+                    if (item.IsAdmin == true)
+                    {
                         return View("../AfterLogInAdmin");
                     }
                     else return View("../AfterLogInNoAdmin");
@@ -44,7 +49,20 @@ namespace ToDoList_WebAppDemo.Controllers
             }
             return RedirectToAction("Index");
         }
+        public IActionResult LogOut()
+        {
+            Logged.LoggedIn = false;
+            return View("../Index");
+        }
+        public IActionResult Admin()
+        {
+            return View("../AfterLogInAdmin");
+        }
 
+        public IActionResult NoAdmin()
+        {
+            return View("../AfterLogInNoAdmin");
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
